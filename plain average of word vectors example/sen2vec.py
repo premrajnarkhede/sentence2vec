@@ -43,9 +43,9 @@ class averageVectorSimilarity(object):
             text = unicode(raw_input("Enter text:"))
             vector = self.getAverageVectorForTweet(text)
             results= self.tree.query(vector,10)
-            print results
             for rindex,result in enumerate(results[1]):
-                print "Distance: ",results[0]," Tweet Text: ",self.tweets[result],
+                print "Distance: ",results[0][rindex]," Tweet Text: ",self.tweets[result]
+                print "\n"
             
 if __name__ == '__main__':
     avs = averageVectorSimilarity()
