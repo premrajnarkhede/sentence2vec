@@ -85,6 +85,7 @@ class weighedVectorSimilarity(object):
             self.word_weight[wordpair[0]] = int(wordpair[1])
         print "Done reading weights"
     def getAverageWeighedVectorForTweet(self,tweet):
+	#print tweet
         tweet = removeAllPunctuations(tweet.lower())
         tweet_doc = self.nlp(tweet)
         vectors = []
